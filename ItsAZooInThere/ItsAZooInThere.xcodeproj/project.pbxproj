@@ -13,6 +13,10 @@
 		FAF90C0122668E56000CB4E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF90C0022668E56000CB4E7 /* Assets.xcassets */; };
 		FAF90C0422668E56000CB4E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF90C0222668E56000CB4E7 /* LaunchScreen.storyboard */; };
 		FAF90C0F22668E56000CB4E7 /* ItsAZooInThereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF90C0E22668E56000CB4E7 /* ItsAZooInThereTests.swift */; };
+		FAF90C1C2266A1C4000CB4E7 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF90C1B2266A1C4000CB4E7 /* Animal.swift */; };
+		FAF90C2A22671B0D000CB4E7 /* serval.wav in Resources */ = {isa = PBXBuildFile; fileRef = FAF90C2722671B0D000CB4E7 /* serval.wav */; };
+		FAF90C2B22671B0D000CB4E7 /* fox.wav in Resources */ = {isa = PBXBuildFile; fileRef = FAF90C2822671B0D000CB4E7 /* fox.wav */; };
+		FAF90C2C22671B0D000CB4E7 /* penguin.wav in Resources */ = {isa = PBXBuildFile; fileRef = FAF90C2922671B0D000CB4E7 /* penguin.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		FAF90C0A22668E56000CB4E7 /* ItsAZooInThereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItsAZooInThereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF90C0E22668E56000CB4E7 /* ItsAZooInThereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItsAZooInThereTests.swift; sourceTree = "<group>"; };
 		FAF90C1022668E56000CB4E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF90C1B2266A1C4000CB4E7 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		FAF90C2722671B0D000CB4E7 /* serval.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = serval.wav; sourceTree = "<group>"; };
+		FAF90C2822671B0D000CB4E7 /* fox.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fox.wav; sourceTree = "<group>"; };
+		FAF90C2922671B0D000CB4E7 /* penguin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = penguin.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +85,14 @@
 		FAF90BF822668E55000CB4E7 /* ItsAZooInThere */ = {
 			isa = PBXGroup;
 			children = (
+				FAF90C2622671B0D000CB4E7 /* sounds */,
 				FAF90BF922668E55000CB4E7 /* AppDelegate.swift */,
 				FAF90BFB22668E55000CB4E7 /* ViewController.swift */,
 				FAF90BFD22668E55000CB4E7 /* Main.storyboard */,
 				FAF90C0022668E56000CB4E7 /* Assets.xcassets */,
 				FAF90C0222668E56000CB4E7 /* LaunchScreen.storyboard */,
 				FAF90C0522668E56000CB4E7 /* Info.plist */,
+				FAF90C1B2266A1C4000CB4E7 /* Animal.swift */,
 			);
 			path = ItsAZooInThere;
 			sourceTree = "<group>";
@@ -94,6 +104,17 @@
 				FAF90C1022668E56000CB4E7 /* Info.plist */,
 			);
 			path = ItsAZooInThereTests;
+			sourceTree = "<group>";
+		};
+		FAF90C2622671B0D000CB4E7 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FAF90C2722671B0D000CB4E7 /* serval.wav */,
+				FAF90C2822671B0D000CB4E7 /* fox.wav */,
+				FAF90C2922671B0D000CB4E7 /* penguin.wav */,
+			);
+			name = sounds;
+			path = ../../sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +201,9 @@
 				FAF90C0422668E56000CB4E7 /* LaunchScreen.storyboard in Resources */,
 				FAF90C0122668E56000CB4E7 /* Assets.xcassets in Resources */,
 				FAF90BFF22668E55000CB4E7 /* Main.storyboard in Resources */,
+				FAF90C2C22671B0D000CB4E7 /* penguin.wav in Resources */,
+				FAF90C2A22671B0D000CB4E7 /* serval.wav in Resources */,
+				FAF90C2B22671B0D000CB4E7 /* fox.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +223,7 @@
 			files = (
 				FAF90BFC22668E55000CB4E7 /* ViewController.swift in Sources */,
 				FAF90BFA22668E55000CB4E7 /* AppDelegate.swift in Sources */,
+				FAF90C1C2266A1C4000CB4E7 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,10 +392,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ItsAZooInThere;
+				PRODUCT_BUNDLE_IDENTIFIER = ItsAZooInThere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -385,10 +410,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ItsAZooInThere;
+				PRODUCT_BUNDLE_IDENTIFIER = ItsAZooInThere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
