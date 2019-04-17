@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAE21EF5226724390020E383 /* serval.wav in Resources */ = {isa = PBXBuildFile; fileRef = FAE21EF2226724390020E383 /* serval.wav */; };
+		FAE21EF6226724390020E383 /* fox.wav in Resources */ = {isa = PBXBuildFile; fileRef = FAE21EF3226724390020E383 /* fox.wav */; };
+		FAE21EF7226724390020E383 /* penguin.wav in Resources */ = {isa = PBXBuildFile; fileRef = FAE21EF4226724390020E383 /* penguin.wav */; };
 		FAF90BFA22668E55000CB4E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF90BF922668E55000CB4E7 /* AppDelegate.swift */; };
 		FAF90BFC22668E55000CB4E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF90BFB22668E55000CB4E7 /* ViewController.swift */; };
 		FAF90BFF22668E55000CB4E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF90BFD22668E55000CB4E7 /* Main.storyboard */; };
@@ -14,9 +17,6 @@
 		FAF90C0422668E56000CB4E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF90C0222668E56000CB4E7 /* LaunchScreen.storyboard */; };
 		FAF90C0F22668E56000CB4E7 /* ItsAZooInThereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF90C0E22668E56000CB4E7 /* ItsAZooInThereTests.swift */; };
 		FAF90C1C2266A1C4000CB4E7 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF90C1B2266A1C4000CB4E7 /* Animal.swift */; };
-		FAF90C2A22671B0D000CB4E7 /* serval.wav in Resources */ = {isa = PBXBuildFile; fileRef = FAF90C2722671B0D000CB4E7 /* serval.wav */; };
-		FAF90C2B22671B0D000CB4E7 /* fox.wav in Resources */ = {isa = PBXBuildFile; fileRef = FAF90C2822671B0D000CB4E7 /* fox.wav */; };
-		FAF90C2C22671B0D000CB4E7 /* penguin.wav in Resources */ = {isa = PBXBuildFile; fileRef = FAF90C2922671B0D000CB4E7 /* penguin.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FAE21EF2226724390020E383 /* serval.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = serval.wav; sourceTree = "<group>"; };
+		FAE21EF3226724390020E383 /* fox.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fox.wav; sourceTree = "<group>"; };
+		FAE21EF4226724390020E383 /* penguin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = penguin.wav; sourceTree = "<group>"; };
 		FAF90BF622668E55000CB4E7 /* ItsAZooInThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItsAZooInThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF90BF922668E55000CB4E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF90BFB22668E55000CB4E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,9 +44,6 @@
 		FAF90C0E22668E56000CB4E7 /* ItsAZooInThereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItsAZooInThereTests.swift; sourceTree = "<group>"; };
 		FAF90C1022668E56000CB4E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF90C1B2266A1C4000CB4E7 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
-		FAF90C2722671B0D000CB4E7 /* serval.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = serval.wav; sourceTree = "<group>"; };
-		FAF90C2822671B0D000CB4E7 /* fox.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fox.wav; sourceTree = "<group>"; };
-		FAF90C2922671B0D000CB4E7 /* penguin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = penguin.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +64,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAE21EF1226724390020E383 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FAE21EF2226724390020E383 /* serval.wav */,
+				FAE21EF3226724390020E383 /* fox.wav */,
+				FAE21EF4226724390020E383 /* penguin.wav */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		FAF90BED22668E55000CB4E7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +95,7 @@
 		FAF90BF822668E55000CB4E7 /* ItsAZooInThere */ = {
 			isa = PBXGroup;
 			children = (
-				FAF90C2622671B0D000CB4E7 /* sounds */,
+				FAE21EF1226724390020E383 /* sounds */,
 				FAF90BF922668E55000CB4E7 /* AppDelegate.swift */,
 				FAF90BFB22668E55000CB4E7 /* ViewController.swift */,
 				FAF90BFD22668E55000CB4E7 /* Main.storyboard */,
@@ -104,17 +114,6 @@
 				FAF90C1022668E56000CB4E7 /* Info.plist */,
 			);
 			path = ItsAZooInThereTests;
-			sourceTree = "<group>";
-		};
-		FAF90C2622671B0D000CB4E7 /* sounds */ = {
-			isa = PBXGroup;
-			children = (
-				FAF90C2722671B0D000CB4E7 /* serval.wav */,
-				FAF90C2822671B0D000CB4E7 /* fox.wav */,
-				FAF90C2922671B0D000CB4E7 /* penguin.wav */,
-			);
-			name = sounds;
-			path = ../../sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +200,9 @@
 				FAF90C0422668E56000CB4E7 /* LaunchScreen.storyboard in Resources */,
 				FAF90C0122668E56000CB4E7 /* Assets.xcassets in Resources */,
 				FAF90BFF22668E55000CB4E7 /* Main.storyboard in Resources */,
-				FAF90C2C22671B0D000CB4E7 /* penguin.wav in Resources */,
-				FAF90C2A22671B0D000CB4E7 /* serval.wav in Resources */,
-				FAF90C2B22671B0D000CB4E7 /* fox.wav in Resources */,
+				FAE21EF7226724390020E383 /* penguin.wav in Resources */,
+				FAE21EF5226724390020E383 /* serval.wav in Resources */,
+				FAE21EF6226724390020E383 /* fox.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
