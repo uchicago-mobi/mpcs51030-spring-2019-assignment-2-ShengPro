@@ -1,0 +1,114 @@
+
+### Requirements
+
+Model and Data
+2/2 Custom class "Animal" that conforms to CustomStringConvertible
+0.5/0.5 Prints animal info to console via description property
+0.5/0.5 "Animals" array is shuffled when app is launched
+
+User Interface
+1/1 UIScrollView's contentSize is 3x wider than the screen with paging enabled
+2/2 3 UIButtons display animal names
+2/2 3 UIImageViews display animal images
+1/1 Uses for loop with varying x coordinate to populate UIButtons and UIImageViews
+
+Animal Name Button
+1/1 Uses button tag to identify correct animal object
+1/1 UIAlertController displays animal's name and age
+2/2 Animal sound plays
+
+Animal Species Label
+1/1 Label does not scroll with the rest of the screen
+2/2 Label changes animal name using UIScrollViewDelegate
+1/1 Label fades in and out using the alpha property
+
+Code Quality
+1.5/2 Best Practice
+0.5/1 Well-Formatted
+1.5/2 Clearly Written
+1/1 Concise
+
+Miscellaneous
+1/1 Compiles with no warnings or errors
+0.5/0.5 Custom icon
+0/0.5 List of sources
+
+### Comments
+
+Nice work, this app is fully functional. Please note the code quality comments below.
+
+----------------
+
+Your viewDidLoad method in ViewController.swift is performing multiple different tasks.
+This is a method where multiple tasks will happen, but we should split the code for those 
+tasks into helper methods. Here's an example of how we could make this code more 
+encapsulated and more readable:
+
+Task 1: populateAnimalsArray() <- You've already done this one! Good job
+Task 2: configureButtonsAndImageViews()
+
+Now, viewDidLoad looks like this:
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+ 
+    // some miscellaneous small-task code
+
+    populateAnimalsArray()
+    configureButtonsAndImageViews()
+}
+
+Much cleaner! Note that the names of these methods tell you exactly what they do. That
+indicates a method is well-named.
+
+A second method that could benefit from splitting its functionality into helpers is the
+buttonTapped method. How many distinct tasks is that method performing, and what would be
+good names for the helper methods you can create?
+
+----------------
+
+On line 59 of your view controller, you write "for i in 0...2". This is static and non-
+maintanable. We like to be as dynamic as possible in our coding. If another animal gets
+added to the zoo, unless we remember to update this number, the 4th animal will never show
+up. If an animal leaves the zoo, we have a much worse problem. The app would crash with
+an index out-of-range error. How can we be more dynamic? Like this:
+
+for i in 0..<animals.count {
+
+OR
+
+for (i, animal) in animals.enumerated() { 
+// this tuple gives you both the Int i and the animal object at that index. Handy!
+
+----------------
+
+Careful with your newlines. You do a good job using them to segment your code into 
+distinct "thoughts", but there should only ever be one empty newline at a time. For
+instance, lines 41-45 of your view controller should be cut down to one line.
+
+----------------
+
+We camelCase in Swift, not snake_case.
+
+All variables and methods, including IBOutlets and IBActions, start with a lowecaseLetter.
+All classes, structs, and enums start with an UppercaseLetter.
+
+----------------
+
+Your view controller has all of it's sections in order, but please mark them.
+
+// MARK: Properties
+
+// MARK: Lifecycle
+
+// MARK: Button Actions
+
+// MARK: Scroll View Delegate
+
+----------------
+
+Lmk if you have any questions!
+
+### Score
+
+23/25
